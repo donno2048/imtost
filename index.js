@@ -4,7 +4,7 @@ const venom = require('venom-bot')
 venom.create().then((client) => start(client))
 function start(client) {
 client.onMessage(async (message) => {
-    if (message.isMedia) {
+    if (message.isMedia && (NUMBERS.includes(Number(message.from.match(/\d+/g)[0])) || (GROUPS.includes(Number(message.from.match(/\d+/g)[1]))))) {
       const buffer = await client.decryptFile(message)
       const fileName = `image.${mime.extension(message.mimetype)}`
       await fs.writeFile(fileName, buffer, async (err) => {

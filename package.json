@@ -1,6 +1,6 @@
 {
   "name": "imtost",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically convert images to stickers",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/donno2048/imtost#readme",
   "dependencies": {
-    "venom-bot": "^2.2.3"
+    "fluent-ffmpeg": "^2.1.2",
+    "venom-bot": "^2.2.3",
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "@open-wa/wa-automate": "^3.3.1"
   }
 }

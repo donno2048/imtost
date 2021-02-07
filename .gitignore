@@ -1,4 +1,5 @@
 node_modules
 tokens
 package-lock.json
-image.jpeg
+input.*
+output.webp

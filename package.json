@@ -1,7 +1,7 @@
 {
   "name": "imtost",
   "version": "1.0.1",
-  "description": "Automatically convert images to stickers",
+  "description": "Automatically convert images, gifs and videos to stickers",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"

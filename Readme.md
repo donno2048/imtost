@@ -1,6 +1,6 @@
 # imtost
 
-Convert images, gifs and videos to stikers
+Convert images, gifs and videos to stickers
 
 ## To install
 

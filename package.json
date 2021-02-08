@@ -4,7 +4,7 @@
   "description": "Automatically convert images, gifs and videos to stickers",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

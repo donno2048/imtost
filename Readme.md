@@ -8,4 +8,4 @@ Convert images, gifs and videos to stickers
 
 ## To run
 
-`npm test`
+`npm start`

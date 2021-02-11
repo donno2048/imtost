@@ -7,7 +7,10 @@ ffmpeg.setFfmpegPath(ffmpegPath)
 venom.create().then((client) => start(client))
 function start(client) {
   client.onMessage(async (message) => {
-    if (message.isMedia) {
+    let info = await client.getHostDevice();
+    var cap = await message.caption;
+    if (message.isMedia && (message.isGroupMsg === false || cap.includes(`@${info.wid.user}`))) {
+      await client.reply(message.from, 'Wait while I\'m processing your request', message.id.toString());
       const filename = `./input.${message.mimetype.split('/')[1]}`
       fs.writeFileSync(filename, await decryptMedia(message, process.env.UserAgent).catch())
       ffmpeg(filename).size('240x?').aspect('1:1').autopad().fps(30).output('./output.webp').on('end', function () {ffmpeg(filename).size(`240x?`).fps(`${Math.floor(30 * (900000 / fs.statSync('./output.webp').size)) - 1}`).aspect('1:1').autopad().output('./output.webp').on('end', function () {client.sendImageAsStickerGif(message.from, './output.webp')}).run()}).run()

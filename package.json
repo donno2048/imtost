@@ -21,7 +21,7 @@
   "homepage": "https://github.com/donno2048/imtost#readme",
   "dependencies": {
     "fluent-ffmpeg": "^2.1.2",
-    "venom-bot": "^2.2.3",
+    "venom-bot": "^3.0.9",
     "@ffmpeg-installer/ffmpeg": "^1.0.20",
     "@open-wa/wa-automate": "^3.3.1"
   }

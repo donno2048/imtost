@@ -6,7 +6,7 @@ var ffmpeg = require('fluent-ffmpeg')
 ffmpeg.setFfmpegPath(ffmpegPath)
 venom.create().then((client) => start(client))
 function start(client) {
-  client.onMessage(async (message) => {
+  client.onAnyMessage(async (message) => {
     if (message.isMedia) {
       const filename = `./input.${message.mimetype.split('/')[1]}`
       fs.writeFileSync(filename, await decryptMedia(message, process.env.UserAgent).catch())

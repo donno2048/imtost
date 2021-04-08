@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "description": "Automatically convert images, gifs and videos to stickers",
   "main": "index.js",
-  "bin": "node index.js",
+  "bin": "node ./index.js",
   "scripts": {
     "start": "node index.js"
   },

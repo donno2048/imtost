@@ -1,5 +1,4 @@
 node_modules
 tokens
-package-lock.json
 input.*
 output.webp

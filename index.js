@@ -1,4 +1,4 @@
-const { decryptMedia, Client } = require('@open-wa/wa-automate')
+const { decryptMedia } = require('@open-wa/wa-automate')
 const fs = require('fs')
 const venom = require('venom-bot')
 const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path
